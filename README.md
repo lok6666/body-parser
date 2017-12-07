@@ -9,9 +9,6 @@
 Node.js正文解析中间件。
 在express框架中，允许通过中间件的使用来调用第三方库，这些库让我们开发更方便，也更容易开发出各种更加强大的应用程序。
 
-[了解Node.js中HTTP事务的解剖](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/).
-
-
 本模块提供以下解析器：
 
   * [JSON body parser](#bodyparserjsonoptions)
