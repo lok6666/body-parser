@@ -1,6 +1,6 @@
 # body-parser
-Express是一个基于Node.js平台的web应用开发框架，Node.js基础之上扩展了web应用开发所需要的基础功能，从而使得我们开发Web应用更加方便、更加快捷，
-在express框架中，通过中间件的使用来调用第三方库，这些库让我们开发更方便，也更容易开发出各种更加强大的应用程序。而body-parser是express中的比较常用的第三方中间件。
+Express是一个基于Node.js平台的MVC框架，在Node.js基础之上扩展了web应用开发所需要的基础功能，从而使得我们开发Web应用更加方便、更加快捷，
+在express框架中，通过中间件的使用来调用第三方库,而body-parser是express中的比较常用的第三方中间件。
 
 ## 中间件的理解
 ![cover](images/201751994917918.png)
@@ -20,7 +20,7 @@ $ npm install body-parser
 var bodyParser = require('body-parser')
 ```
 
-bodyParser用于解析客户端请求的body中的内容，内部使用json数据、Buffer流数据、文本数据、UTF-8的编码的数据。
+bodyParser有四个处理方法，分别采用不同的方式：内部使用json数据、Buffer流数据、文本数据、UTF-8的编码的数据。
 
 ### bodyParser.json([options]) .
 
