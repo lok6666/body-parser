@@ -1,21 +1,6 @@
 # body-parser
-
-[![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
-[![Build Status][travis-image]][travis-url]
-[![Test Coverage][coveralls-image]][coveralls-url]
-[![Gratipay][gratipay-image]][gratipay-url]
-
-Node.js正文解析中间件。
-在express框架中，允许通过中间件的使用来调用第三方库，这些库让我们开发更方便，也更容易开发出各种更加强大的应用程序。
-
-本模块提供以下解析器：
-
-  * [JSON body parser](#bodyparserjsonoptions)
-  * [Raw body parser](#bodyparserrawoptions)
-  * [Text body parser](#bodyparsertextoptions)
-  * [URL-encoded form body parser](#bodyparserurlencodedoptions)
-
+Express是一个基于Node.js平台的web应用开发框架，Node.js基础之上扩展了web应用开发所需要的基础功能，从而使得我们开发Web应用更加方便、更加快捷，
+在express框架中，通过中间件的使用来调用第三方库，这些库让我们开发更方便，也更容易开发出各种更加强大的应用程序。
 
 ## 安装
 
@@ -31,7 +16,7 @@ $ npm install body-parser
 var bodyParser = require('body-parser')
 ```
 
-该bodyParser用于解析客户端请求的body中的内容，内部使用json数据、Buffer流数据、文本数据、UTF-8的编码的数据。
+bodyParser用于解析客户端请求的body中的内容，内部使用json数据、Buffer流数据、文本数据、UTF-8的编码的数据。
 
 ### bodyParser.json([options]) .
 
