@@ -41,7 +41,7 @@ var bodyParser = require('body-parser')
 
 #### Options
 
-json函数接受一个可选的选项对象，该对象可以包含以下键:
+json函数接受一个可选的选项对象，该对象可以包含以下属性:
 
 ##### inflate
 
@@ -80,7 +80,7 @@ mime类型(如应用程序/ json)，或者是带有通配符的mime类型(如* /
 
 #### Options
 
-原始函数接受一个可选选项，该对象可能包含以下键:
+原始函数接受一个可选选项，该对象可能包含以下属性:
 
 ##### inflate
 
@@ -108,7 +108,7 @@ type选项直接传递给type - library，它可以是一个扩展名(如bin)，
 在中间件(即req.body)之后，在请求对象上填充包含解析数据的新体字符串。这将是一个主体的字符串。
 #### Options
 
-原始函数接受一个可选选项，该对象可能包含以下键:
+原始函数接受一个可选选项，该对象可能包含以下属性:
 ##### defaultCharset
 
 如果Content-Type在请求的标题中未指定字符集，请指定文本内容的缺省字符集。默认为utf-8。
@@ -137,7 +137,7 @@ body包含解析数据的新对象request 在中间件（ie req.body）之后被
 其中该值可以是一个字符串或阵列（时extended是 false），或任何类型的（当extended是true）。
 #### Options
 
-该urlencoded函数采用options可能包含以下任何键的可选对象：
+该urlencoded函数采用options可能包含以下任何键的可选属性：
 
 ##### extended
 
