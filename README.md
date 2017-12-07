@@ -134,11 +134,6 @@ body包含解析数据的新对象request 在中间件（ie req.body）之后被
 
 D默认为true，但使用默认已被弃用。请研究和之间的差异qs，querystring并选择适当的设置。
 
-##### inflate
-
-When set to `true`, then deflated (compressed) bodies will be inflated; when
-`false`, deflated bodies are rejected. Defaults to `true`.
-
 ##### limit
 
 设置为true时，deflate压缩数据会被解压缩；设置为true时，deflate压缩数据会被拒绝。默认为true。
