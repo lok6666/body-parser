@@ -11,14 +11,6 @@ Node.js正文解析中间件。
 
 [了解Node.js中HTTP事务的解剖](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/).
 
-这并不处理多部门机构，因为它们的复杂性和典型的大的性质。对于多部分机构，您可能对以下模块感兴趣：
-
-  * [busboy](https://www.npmjs.org/package/busboy#readme) and
-    [connect-busboy](https://www.npmjs.org/package/connect-busboy#readme)
-  * [multiparty](https://www.npmjs.org/package/multiparty#readme) and
-    [connect-multiparty](https://www.npmjs.org/package/connect-multiparty#readme)
-  * [formidable](https://www.npmjs.org/package/formidable#readme)
-  * [multer](https://www.npmjs.org/package/multer#readme)
 
 本模块提供以下解析器：
 
@@ -27,10 +19,6 @@ Node.js正文解析中间件。
   * [Text body parser](#bodyparsertextoptions)
   * [URL-encoded form body parser](#bodyparserurlencodedoptions)
 
-其他您可能感兴趣的身体解析器：
-
-- [body](https://www.npmjs.org/package/body#readme)
-- [co-body](https://www.npmjs.org/package/co-body#readme)
 
 ## 安装
 
