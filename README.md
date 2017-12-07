@@ -7,8 +7,8 @@
 [![Gratipay][gratipay-image]][gratipay-url]
 
 Node.js正文解析中间件。
+在express框架中，允许通过中间件的使用来调用第三方库，这些库让我们开发更方便，也更容易开发出各种更加强大的应用程序。
 
-在您的处理程序之前解析传入的中间件中的请求主体，在req.body属性下可用。
 [了解Node.js中HTTP事务的解剖](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/).
 
 这并不处理多部门机构，因为它们的复杂性和典型的大的性质。对于多部分机构，您可能对以下模块感兴趣：
@@ -46,11 +46,7 @@ $ npm install body-parser
 var bodyParser = require('body-parser')
 ```
 
-该bodyParser对象暴露各种工厂来创建中间件。所有的中间件将填充req。当内容类型请求头与类型选项相匹配时，body属性与被解析的主体相匹配，或者空对象({})如果没有主体来解析，则内容类型不匹配，或者发生错误。
-注释：工厂，制造厂(不具有唯一ID，由对象的属性描述，一般为内存中的临时对象，可以用来传递参数或对实体进行补充描述。工厂(Factories)：主要用来创建实体，目前架构实践中一般采用IOC容器来实现工厂的功能
-
-错误部分描述了该模块返回的各种错误部分描述了该模块返回的各种
-[错误](#errors).
+该bodyParser用于解析客户端请求的body中的内容，内部使用JSON编码处理，url编码处理等。
 
 ### bodyParser.json([options]) .
 
