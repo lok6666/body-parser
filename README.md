@@ -31,7 +31,7 @@ $ npm install body-parser
 var bodyParser = require('body-parser')
 ```
 
-该bodyParser用于解析客户端请求的body中的内容，内部使用JSON编码处理，url编码处理等。
+该bodyParser用于解析客户端请求的body中的内容，内部使用json数据、Buffer流数据、文本数据、UTF-8的编码的数据。
 
 ### bodyParser.json([options]) .
 
@@ -210,11 +210,11 @@ req.setEncoding在  这个中间件之前调用方法的时候会出现这个错
 当请求的Content-Encoding头部包含不受支持的编码时，将发生此错误。编码包含在消息中以及encoding属性中。该status属性设置为415，该type属性设置为'encoding.unsupported'，该encoding 属性设置为不支持的编码。
 
 
-## Examples（例子）
+## Exampless三种用法
 
-### Express / Connect顶级通用
+### 底层中间件用法： 
 
-此示例演示了将通用JSON和URL编码解析器添加为顶级中间件，该解析器将解析所有传入请求的主体。这是最简单的设置。
+这将拦截和解析所有的请求；也即这种用法是全局的。
 
 ```js
 var express = require('express')
@@ -235,9 +235,9 @@ app.use(function (req, res) {
 })
 ```
 
-### 特快专线
+### 特定路由下的中间件用法
 
-这个例子演示了如何将body parser专门添加到需要它们的路由中。一般来说，这是Express使用body-parser最值得推荐的方法。
+这种用法是针对特定路由下的特定请求的，只有请求该路由时，中间件才会拦截和解析该请求；也即这种用法是局部的
 
 ```js
 var express = require('express')
@@ -264,9 +264,9 @@ app.post('/api/users', jsonParser, function (req, res) {
 })
 ```
 
-### 更改解析器的接受类型
+### 设置Content-Type 属性
 
-所有解析器接受一个type选项，允许您更改 Content-Type中间件将解析的选项。
+用于修改和设定中间件解析的body类容类型。
 
 ```js
 var express = require('express')
