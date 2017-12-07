@@ -3,7 +3,7 @@ Express是一个基于Node.js平台的web应用开发框架，Node.js基础之�
 在express框架中，通过中间件的使用来调用第三方库，这些库让我们开发更方便，也更容易开发出各种更加强大的应用程序。而body-parser是express中的比较常用的第三方中间件。
 
 ## 中间件的理解
-
+[![cover](images/201751994917918.png)]
 ## 安装
 
 ```sh
