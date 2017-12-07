@@ -121,7 +121,7 @@ MIME类型（like text/pl     ain）或带有通配符（如*/*or text/*）的MI
 该verify选项（如果提供）被称为verify(req, res, buf, encoding)，其中buf是Buffer原始请求主体，并且encoding是请求的编码。抛出错误可以中止解析。
 ### bodyParser.urlencoded([options])
 
-返回仅解析urlencoded正文的中间件，只查看Content-Type头部与type选项匹配的请求。此解析器只接受身体的UTF-8编码，并支持自动膨胀gzip和deflate编码。
+返回仅解析urlencoded正文的中间件，只查看Content-Type头部与type选项匹配的请求。此解析器只接受身体的UTF-8编码，并支持自动gzip和deflate编码。
 body包含解析数据的新对象request 在中间件（ie req.body）之后被填充在对象上。该对象将包含键-值对，
 其中该值可以是一个字符串或阵列（时extended是 false），或任何类型的（当extended是true）。
 #### Options
