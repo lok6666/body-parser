@@ -157,47 +157,6 @@ limit
 
 该verify选项（如果提供）被称为verify(req, res, buf, encoding)，其中buf是Buffer原始请求主体，并且encoding是请求的编码。抛出错误可以中止解析。
 
-## Errors
-
-此模块提供的中间件根据解析期间的错误情况创建错误。这些错误通常会包含一个status/ statusCode 属性，该属性包含建议的HTTP响应代码，expose确定message属性是否应显示给客户端的type属性，确定错误类型的属性而不与之 匹配 message，以及body包含读取主体的属性， 如果可供使用的话。
-
-以下是发布的常见错误，但出于各种原因可能会出现任何错误。
-
-### 内容编码不受支持
-
-
-当请求有一个Content-Encoding头包含一个编码，但“通胀”选项设置为该错误false。该 status属性设置为415，该type属性设置为 'encoding.unsupported'，该charset属性将被设置为不支持的编码。
-
-### 请求中止
-
-当请求被客户端中止之后，在读取主体完成之前，将发生此错误。该received属性将被设置为在请求被中止之前接收的字节数，并且该expected属性被设置为期望的字节数。该status物业是设置400 和type财产设置'request.aborted'。
-
-### 请求的实体太大
-
-当请求主体的大小大于“限制”选项时，将发生此错误。该limit属性将被设置为字节限制，length 属性将被设置为请求主体的长度。该status物业是设置413和type财产设置'entity.too.large'。
-
-### 请求大小与内容长度不匹配
-
-当请求的长度与Content-Length头部的长度不匹配时，将发生此错误。这通常发生在请求格式不正确时，通常是在Content-Length根据字符而不是字节计算标头时。该status物业是设置400和type财产设置'request.size.invalid'。
-
-### 流编码不应该被设置
-
-req.setEncoding在  这个中间件之前调用方法的时候会出现这个错误。这个模块只能在字节上直接操作，req.setEncoding在使用这个模块时不能调用。该status物业是设置 500和type财产设置'stream.encoding.set'。
-
-### 参数太多了
-
-当请求的内容超过配置将发生该错误 parameterLimit的urlencoded解析器。该status物业是设置 413和type财产设置'parameters.too.many'。
-
-### 不受支持的字符集“BOGUS”
-
-
-当请求在Content-Type头文件中有字符集参数，但是iconv-lite模块不支持，或者分析器不支持时，会发生这个错误 。该字符集包含在消息以及charset属性中。该status属性设置为415，该 type属性设置为'charset.unsupported'，并且该charset属性设置为不受支持的字符集。
-
-### 不支持的内容编码“假”
-
-当请求的Content-Encoding头部包含不受支持的编码时，将发生此错误。编码包含在消息中以及encoding属性中。该status属性设置为415，该type属性设置为'encoding.unsupported'，该encoding 属性设置为不支持的编码。
-
-
 ## Exampless三种用法
 
 ### 底层中间件用法： 
